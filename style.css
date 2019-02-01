@@ -1,10 +1,10 @@
 body {
   padding: 0px;
   margin: 0px;
-  font-family: "Open Sans", sans-serif; }
+  font-family: raleway }
 
 h1, h2, h4, nav li a {
-  font-family: "Headland One", Georgia, serif; }
+  font-family: raleway }
 
 h1 {
   font-size: 48px;
@@ -24,7 +24,7 @@ h2 {
 }
 
 .active{
-    color: #030d18;
+    color: white;
 }
 
 h4 {
@@ -43,12 +43,13 @@ ul {
   list-style: none; }
 
 .nav-container {
-  background-color: #030d18;
+  /*background-color: #000000;*/
   /*background-color: rgba(18, 65, 28, 0.4);*/
+  font-style: bold;
   width: 100%;
-  position: fixed;
+  position: absolute;
   left: 0px;
-  z-index: 2;
+  z-index: 3;
 }
 
 
@@ -56,10 +57,12 @@ nav {
   text-align: right;
   width: 700px;
   margin: 0px auto;
-    margin-right: 20px;
+  margin-right: 20px;
 }
   nav ul {
-    padding: 0px; }
+      width: 100%;
+      padding: 0px;
+    }
   nav li {
     width: 15%;
     display: inline-block; }
@@ -69,22 +72,40 @@ nav {
     nav li a.active {
         color: #aaaaaa;
         }
-  @media screen and (max-width: 640px) {
+
+  @media screen and (max-width: 500px) {
+      
+    .nav-container {
+        position: fixed;
+        z-index: 3;
+    }
     nav {
-      width: 90%; }
-      nav li a {
-        font-size: 18px; } }
+        width: 70%;
+        position: relative;
+        text-align: center;
+        margin: 0px auto;
+    }
+    nav li a {
+        font-size: 10px;
+        
+    }
+      nav ul {
+          width: 100%;
+      }
+}
 
 section {
   padding-top: 40px;
-  height: 795px;
+  height: 100vh;
   width: 100%;
   background-color: #f0eee1;
+  position: relative;
 }
   section .content {
     margin: 0px auto;
-    max-width: 840px; }
-    @media screen and (max-width: 840px) {
+    max-width: 840px;
+}
+    @media screen and (max-width: 500px) {
       section .content {
         width: 90%; } }
     section .content a {
@@ -106,13 +127,13 @@ section {
 
 
 .backgroudservico{
-    /*background-color: #ADB6B5;*/
-    background-color: #0B325B;
+    background-color: #ADB6B5;
+    /*background-color: #0B325B;*/
 }
 
 .backgroudportfolio{
     /*background-color: #DCDCD4;*/
-    background-color: #EB474A;
+    background-color: #ffffff;
 }
 
 .backgroudcontato{
@@ -121,9 +142,25 @@ section {
 
 .backgroudhabilidades{
     /*background-color: #814374;*/
-    background-color: #F1E0D0;
+     /*background-color: #814374;*/
+     background: linear-gradient(rgba(52,57,67,0.8),rgba(52,57,67,0.8)), url(images/work.jpg) no-repeat top center fixed;
+     /*background: url(images/work.jpg) no-repeat top center fixed;*/
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+     z-index: 1;
 }
 
+.foto{
+     background: linear-gradient(rgba(52,57,67,0.7),rgba(52,57,67,0.7)), url(images/pexels.png) no-repeat top center fixed;
+     /*background: url(images/pexels.png) no-repeat top center fixed;*/
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+     z-index: 1;
+}
 
 .logo{
     float: left;
@@ -131,51 +168,142 @@ section {
     width: 700px;
     margin: 0px auto;
     margin-left: 20px;
-}
+     font-family:sans-serif;
+     font-weight: 700;
+}       
 
 .logoul{
     color: #656565;
-    font-family:sans-serif;
+    font-family:raleway;
     font-size: 17px;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 500px) {
+
+   .logoul { 
+        color: #656565;
+        font-family:raleway;
+        font-size: 17px;
+        font-weight: 700;
+
+    }
+}
+
+.navul{
+    color: #656565;
+    font-family:raleway;
+    font-size: 17px;
+    font-weight: 400;
+}
+@media screen and (max-width: 500px) {
+
+   .navul { 
+       width: 100%;
+    }
+}
+
+
+.intro{
+    font-family: raleway;
+    color: white;
+    text-align: center;
+    margin-top: 30vh;
+    font-size: 10vh;
+}
+
+@media only screen and (max-width: 500px) {
+
+   .intro { 
+        margin-top: 30vh;
+       font-size: 8vh; 
+    }
+}
+
+.h2intro{
+    font-family: raleway;
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 4vh; 
+}
+
+@media only screen and (max-width: 500px) {
+
+   .h2intro { 
+        margin-top: 5vh;
+        font-size: 3vh;
+    }
+}
+
+
+
+.main{
+    position: relative;
 }
 
 #divTexto {
     width: 420px;
-    float:left; /* add this */
+    float:right; /* add this */
    /* border: 1px solid red; */
 }
 
 #divTexto2 {
     width: 420px;
     float:right;
+    color: black;
 }
 
 #divEspaco {
     width: 300px;
     float:right;
-    z-index: 1;
+    z-index: 2;
      /* add this */
    /* border: 1px solid red; */
 }
 #divSkills {
    /* border: 1px solid green;*/
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
+    font-size: 10px;
+    width: 50%;
+  
+}
+@media  screen and (max-width: 500px) {
+    
+    #divSkills {
+       float: left;
+    }
 }
 
 
 .circular {
 	overflow: hidden;
     float:left;
-    width: 300px;
-	height: 300px;
+    width: 40vh;
+	height: 40vh;
+    display: flex;
+    justify-content: center;
 	border-radius: 150px;
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
-	background: url(images/perfil.jpg) no-repeat;
+	background: url(images/perfil_crop.jpg) no-repeat;
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+
+
+.profilecircle {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: url(images/perfil_crop.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    object-fit: cover;
 }
 
 
@@ -185,7 +313,7 @@ section {
 	margin-bottom:15px;
 	width:100%;
 	background:#eee;
-	height:35px;
+	height:20px;
 	border-radius:3px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
@@ -200,12 +328,21 @@ section {
 	-o-transition-property:width, background-color;
 	transition-property:width, background-color;
 }
+@media  screen and (max-width: 500px) {
+    .skillbar { 
+        float: center;
+        width:100%;
+        height: 20px;
+        margin-bottom: auto;
+        border-radius:1px;
+    }
+}
 
 .skillbar-title {
 	position:absolute;
 	top:0;
 	left:0;
-width:110px;
+    width:110px;
 	font-weight:bold;
 	font-size:13px;
 	color:#ffffff;
@@ -218,12 +355,23 @@ width:110px;
 	border-bottom-left-radius:3px;
 }
 
+
+@media  screen and (max-width: 500px) {
+    .skillbar-title { 
+        float: left;
+        width:110px;
+        
+        margin-bottom: auto;
+        border-radius:1px;
+    }
+}
+
 .skillbar-title span {
 	display:block;
 	background:rgba(0, 0, 0, 0.1);
 	padding:0 20px;
-	height:35px;
-	line-height:35px;
+	height:20px;
+	line-height:20px;
 	-webkit-border-top-left-radius:3px;
 	-webkit-border-bottom-left-radius:3px;
 	-moz-border-radius-topleft:3px;
@@ -232,8 +380,19 @@ width:110px;
 	border-bottom-left-radius:3px;
 }
 
+@media  screen and (max-width: 500px) {
+    .skillbar-title span { 
+        float: left;
+        width:10%;
+        height: 20px;
+        line-height:20px;
+        margin-bottom: auto;
+        border-radius:1px;
+    }
+}
+
 .skillbar-bar {
-	height:35px;
+	height:20px;
 	width:0px;
 	background:#6adcfa;
 	border-radius:3px;
@@ -241,13 +400,91 @@ width:110px;
 	-webkit-border-radius:3px;
 }
 
+@media  screen and (max-width: 500px) {
+    .skillbar-bar { 
+        float: left;
+        width:10%;
+        height: 20px;
+        margin-bottom: auto;
+        border-radius:1px;
+    }
+}
+
 .skill-bar-percent {
 	position:absolute;
 	right:10px;
 	top:0;
 	font-size:11px;
-	height:35px;
-	line-height:35px;
+	height:20px;
+	line-height:20px;
 	color:#ffffff;
 	color:rgba(0, 0, 0, 0.4);
+}
+
+
+/*
+CODE FOR ARROW
+
+*/
+
+
+.arrows {
+	width: 60px;
+	height: 72px;
+	position: absolute;
+	left: 50%;
+	margin-left: -30px;
+	bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+
+   .arrows { 
+      bottom: 220px;
+    }
+}
+
+
+.arrows path {
+	stroke: white;
+	fill: transparent;
+	stroke-width: 10px;
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite;
+}
+@media screen and (max-width: 500px) {
+  .arrows path{
+        stroke-width: 3px;
+    }
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
 }
